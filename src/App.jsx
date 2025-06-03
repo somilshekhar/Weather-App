@@ -23,7 +23,11 @@ const App = () => {
       setWeather({
         city: data.name,
         temperature: data.main.temp,
-        condition: data.weather && data.weather[0] ? data.weather[0].description : 'N/A'
+        condition: data.weather && data.weather[0] ? data.weather[0].description : 'N/A',
+        humidity: data.main && data.main.humidity !== undefined ? data.main.humidity : 'N/A',
+        windSpeed: data.wind && data.wind.speed !== undefined ? data.wind.speed : 'N/A',
+        visibility: data.visibility !== undefined ? data.visibility : 'N/A',
+        pressure: data.main && data.main.pressure !== undefined ? data.main.pressure : 'N/A'
       });
     // eslint-disable-next-line no-unused-vars
     } catch (error) {
@@ -55,6 +59,10 @@ const App = () => {
               <h3>{weather.city}</h3>
               <p>Temperature: {weather.temperature}°C</p>
               <p>Condition: {weather.condition}</p>
+              <p>Humidity: {weather.humidity}%</p>
+              <p>Wind Speed: {weather.windSpeed} m/s</p>
+              <p>Visibility: {weather.visibility} m</p>
+              <p>Pressure: {weather.pressure} hPa</p>
             </div>
           ) : (
             <p>No weather data available.</p>
