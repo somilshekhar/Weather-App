@@ -62,7 +62,7 @@ input {
   margin: 2rem auto;
   padding: 2rem 1.5rem;
   border-radius: 1.25rem;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  box-shadow: 0 12px 38px 0 rgba(31, 38, 135, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
