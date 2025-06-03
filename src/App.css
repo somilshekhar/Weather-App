@@ -54,9 +54,9 @@ input {
   border-radius: 20px;
 }
 
-/* App card style */
+
 .app {
-  background:blur(10px);
+  background:blur(20px);
   color: #cecece;
   max-width: 400px;
   margin: 2rem auto;
